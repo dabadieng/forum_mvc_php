@@ -17,7 +17,7 @@ class Database
         for ($i = 1; $i <= $nbuser; $i++) {
             $uti_nom = "nom n°$i";
             $uti_prenom = "prenom n°$i";
-            $d = mktime(0, 0, 0, rand(1, 2), rand(1, 30), 2020);
+            $d = mktime(0, 0, 0, rand(1, 2), rand(1, 30), rand(1950,2003));
             $uti_dtnais = date("Y-m-d", $d);
             $uti_profil = rand(1, $nbprofil);
 
@@ -45,7 +45,7 @@ class Database
         for ($i = 1; $i <= $nbmsg; $i++) {
             $mes_texte = "mon texte n°$i";
             $mes_utilisateur = rand(1,$nbutilisateur); 
-            $d = mktime(0, 0, 0, rand(1, 2), rand(1, 30), 2020);
+            $d = mktime(0, 0, 0, rand(1, 12), rand(1, 30), 2019);
             $mes_date = date("Y-m-d", $d);
 
             $data[] = "(null,'$mes_texte','$mes_utilisateur','$mes_date')";

@@ -6,7 +6,7 @@
             <tr>
                 <th>ID</th>
                 <th>Message</th>
-                <th>message</th>
+                <th>Utilisateur</th> 
                 <th>Date</th>
                 <?php
                 if ($_SESSION["uti_id"] <= 2) {
@@ -22,7 +22,7 @@
                 echo "<tr>";
                 echo "<td>$mes_id</td>";
                 echo "<td>$mes_texte</td>";
-                echo "<td>$mes_utilisateur</td>";
+                echo "<td>$uti_nom</td>";
                 echo "<td>$mes_date</td>";
                 if ($_SESSION["uti_id"] <= 2) {
                     echo "<td><a href='" . hlien("message", "edit", "&id=$mes_id") . "'>Editer</a></td>";

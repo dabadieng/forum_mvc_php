@@ -2,9 +2,11 @@
 class Message extends Entity
 {
 
+    
     public function __construct($id = 0)
     {
         parent::__construct("message", "mes_id", $id);
+        
     }
 
     static public function supprimerTout($id)
@@ -26,7 +28,7 @@ class Message extends Entity
         return parent::findAll("message");
     }
 
-    static function updateMessage($ut_id)
+    static function updateMessage($mes_id)
     {
         $sql = parent::updateSql('message', $mes_id, self::getChamps('message'));
         return self::$link->exec($sql);
@@ -39,7 +41,7 @@ class Message extends Entity
 	 * @return array : tableau d'enregistrements
 	 */
 	static function findAll($table) {
-		$sql="select * from $table order by mes_date desc";
+		$sql="select * from $table, utilisateur where mes_utilisateur=uti_id order by mes_date desc";
 		$result=self::$link->query($sql);
 		return $result->fetchAll();		
 	}

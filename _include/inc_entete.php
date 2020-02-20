@@ -1,8 +1,8 @@
 ﻿<div class="myflex">
 	<div>
-		<a href="index.php"><img src="_images/HTML5.png" width="200"></a>
+		<a href="index.php"><img src="_images/ordi.png" width="200"></a>
 	</div>
 	<div>
-		<h1>KOTKOT<H1>		
+		<h1>MON FORUM<H1>		
 	</div>
 </div>

@@ -13,15 +13,19 @@ class Ctr_message extends Ctr_controleur
     {
         $data = Message::findAll("message");
         require $this->gabarit;
-    }
+    } 
 
     public function a_edit()
     {
         if (isset($_POST["btsubmit"])) {
 
             $message = new message();
+            $_POST["mes_date"] = date("Y-m-d H:i:s"); 
+            $_POST["mes_utilisateur"] = $_SESSION["uti_id"]; 
             $message->chargerDepuisTableau($_POST);
             $message->sauver();
+            var_dump($_POST); 
+
             header("location:" . hlien("message", "index"));
         } else {
 
