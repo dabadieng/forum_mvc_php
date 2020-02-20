@@ -2,7 +2,7 @@
 
 //$_SESSION["uti_id"] = 3;
 
-if (isset($_SERVER["uti_id"]) and $_SESSION["uti_id"] == 1) {
+if (isset($_SESSION["uti_id"]) and $_SESSION["uti_id"] == 1) {
     $menu = array(
         [hlien("message", "index"), "Message"],
         [hlien("utilisateur", "index"), "Utilisateur"],
